@@ -13,10 +13,8 @@
 <!-- Top utility bar -->
 <div class="topbar">
   <div class="wrap">
-    <span class="promo">Spedizione gratuita per ordini superiori a 49 € 🚚</span>
+    <span class="promo">Ricevi uno sconto del 10% ogni 50$ di spesa</span>
     <div class="links">
-      <a href="#">Traccia il tuo ordine</a>
-      <a href="#">Assistenza</a>
     </div>
   </div>
 </div>
@@ -244,35 +242,35 @@
   // link non si carica), la scheda mostra automaticamente l'icona come prima:
   // non è mai richiesto avere una foto per ogni prodotto.
   const PRODUCTS = [
-    {id:1, cat:'Utensili manuali', name:'Martello da falegname con impugnatura in gomma', icon:'hammer', image:'https://picsum.photos/seed/ziz1/500/420', price:39, was:55, rating:4.8, badge:'Più venduto', stock:true},
-    {id:2, cat:'Utensili manuali', name:'Chiave inglese regolabile', icon:'wrench', image:'https://picsum.photos/seed/ziz2/500/420', price:34, was:null, rating:4.4, badge:null, stock:true},
-    {id:3, cat:'Utensili manuali', name:'Set cacciaviti di precisione 32 pezzi', icon:'screwdriver', image:'https://picsum.photos/seed/ziz3/500/420', price:49, was:65, rating:4.6, badge:null, stock:true},
+    {id:1, cat:'Utensili manuali', name:'Martello da falegname con impugnatura in gomma', icon:'hammer', image:null, price:39, was:55, rating:4.8, badge:'Più venduto', stock:true},
+    {id:2, cat:'Utensili manuali', name:'Chiave inglese regolabile', icon:'wrench', image:null, price:34, was:null, rating:4.4, badge:null, stock:true},
+    {id:3, cat:'Utensili manuali', name:'Set cacciaviti di precisione 32 pezzi', icon:'screwdriver', image:null, price:49, was:65, rating:4.6, badge:null, stock:true},
     {id:4, cat:'Utensili manuali', name:'Cassetta degli attrezzi 45 pezzi', icon:'hammer', image:null, price:129, was:159, rating:4.7, badge:'Sconto 19%', stock:false},
 
-    {id:5, cat:'Elettroutensili', name:'Trapano avvitatore a batteria 18V', icon:'drill', image:'https://picsum.photos/seed/ziz5/500/420', price:249, was:329, rating:4.9, badge:'Sconto 24%', stock:true},
-    {id:6, cat:'Elettroutensili', name:'Scala in alluminio pieghevole 5 gradini', icon:'ladder', image:'https://picsum.photos/seed/ziz6/500/420', price:179, was:215, rating:4.6, badge:'Sconto', stock:true},
+    {id:5, cat:'Elettroutensili', name:'Trapano avvitatore a batteria 18V', icon:'drill', image:null, price:249, was:329, rating:4.9, badge:'Sconto 24%', stock:true},
+    {id:6, cat:'Elettroutensili', name:'Scala in alluminio pieghevole 5 gradini', icon:'ladder', image:null, price:179, was:215, rating:4.6, badge:'Sconto', stock:true},
     {id:7, cat:'Elettroutensili', name:'Cacciavite elettrico ricaricabile USB', icon:'screwdriver', image:null, price:89, was:null, rating:4.3, badge:'Nuovo', stock:true},
-    {id:8, cat:'Elettroutensili', name:'Presa multipla elettrica', icon:'socket', image:'https://picsum.photos/seed/ziz8/500/420', price:45, was:null, rating:4.5, badge:null, stock:true},
+    {id:8, cat:'Elettroutensili', name:'Presa multipla elettrica', icon:'socket', image:null, price:45, was:null, rating:4.5, badge:null, stock:true},
 
-    {id:9, cat:'Illuminazione', name:'Lampadina LED smart controllabile', icon:'bulb', image:'https://picsum.photos/seed/ziz9/500/420', price:29, was:null, rating:4.6, badge:null, stock:true},
-    {id:10, cat:'Illuminazione', name:'Lampada da scrivania pieghevole', icon:'lamp', image:'https://picsum.photos/seed/ziz10/500/420', price:69, was:89, rating:4.4, badge:null, stock:true},
+    {id:9, cat:'Illuminazione', name:'Lampadina LED smart controllabile', icon:'bulb', image:null, price:29, was:null, rating:4.6, badge:null, stock:true},
+    {id:10, cat:'Illuminazione', name:'Lampada da scrivania pieghevole', icon:'lamp', image:null, price:69, was:89, rating:4.4, badge:null, stock:true},
     {id:11, cat:'Illuminazione', name:'Striscia LED colorata 5 metri', icon:'bulb', image:null, price:55, was:75, rating:4.7, badge:'Sconto 27%', stock:true},
-    {id:12, cat:'Illuminazione', name:'Lampada da parete esterna impermeabile', icon:'lamp', image:'https://picsum.photos/seed/ziz12/500/420', price:99, was:null, rating:4.2, badge:null, stock:false},
+    {id:12, cat:'Illuminazione', name:'Lampada da parete esterna impermeabile', icon:'lamp', image:null, price:99, was:null, rating:4.2, badge:null, stock:false},
 
-    {id:13, cat:'Pittura', name:'Set pennelli professionali 5 pezzi', icon:'brush', image:'https://picsum.photos/seed/ziz13/500/420', price:59, was:79, rating:4.5, badge:null, stock:true},
-    {id:14, cat:'Pittura', name:'Rullo per pittura con vaschetta', icon:'roller', image:'https://picsum.photos/seed/ziz14/500/420', price:35, was:null, rating:4.3, badge:null, stock:true},
+    {id:13, cat:'Pittura', name:'Set pennelli professionali 5 pezzi', icon:'brush', image:null, price:59, was:79, rating:4.5, badge:null, stock:true},
+    {id:14, cat:'Pittura', name:'Rullo per pittura con vaschetta', icon:'roller', image:null, price:35, was:null, rating:4.3, badge:null, stock:true},
     {id:15, cat:'Pittura', name:'Pittura murale per interni 3,6 litri', icon:'brush', image:null, price:145, was:170, rating:4.6, badge:'Sconto', stock:true},
-    {id:16, cat:'Pittura', name:'Nastro adesivo di protezione per pittura', icon:'roller', image:'https://picsum.photos/seed/ziz16/500/420', price:12, was:null, rating:4.1, badge:null, stock:true},
+    {id:16, cat:'Pittura', name:'Nastro adesivo di protezione per pittura', icon:'roller', image:null, price:12, was:null, rating:4.1, badge:null, stock:true},
 
-    {id:17, cat:'Pulizia', name:'Detergente spray multiuso', icon:'spray', image:'https://picsum.photos/seed/ziz17/500/420', price:18, was:null, rating:4.3, badge:'Nuovo', stock:true},
-    {id:18, cat:'Pulizia', name:'Scopa a mocio rotante con doppio secchio', icon:'mop', image:'https://picsum.photos/seed/ziz18/500/420', price:99, was:129, rating:4.8, badge:'Più venduto', stock:true},
+    {id:17, cat:'Pulizia', name:'Detergente spray multiuso', icon:'spray', image:null, price:18, was:null, rating:4.3, badge:'Nuovo', stock:true},
+    {id:18, cat:'Pulizia', name:'Scopa a mocio rotante con doppio secchio', icon:'mop', image:null, price:99, was:129, rating:4.8, badge:'Più venduto', stock:true},
     {id:19, cat:'Pulizia', name:'Set spazzole per pulizia domestica', icon:'spray', image:null, price:27, was:null, rating:4.2, badge:null, stock:true},
-    {id:20, cat:'Pulizia', name:'Aspirapolvere portatile a batteria', icon:'mop', image:'https://picsum.photos/seed/ziz20/500/420', price:159, was:199, rating:4.6, badge:'Sconto 20%', stock:false},
+    {id:20, cat:'Pulizia', name:'Aspirapolvere portatile a batteria', icon:'mop', image:null, price:159, was:199, rating:4.6, badge:'Sconto 20%', stock:false},
 
-    {id:21, cat:'Cucina', name:'Padella antiaderente Tefal 28 cm', icon:'pan', image:'https://picsum.photos/seed/ziz21/500/420', price:89, was:120, rating:4.7, badge:null, stock:true},
-    {id:22, cat:'Cucina', name:'Bollitore elettrico in acciaio inox', icon:'kettle', image:'https://picsum.photos/seed/ziz22/500/420', price:79, was:99, rating:4.5, badge:null, stock:true},
+    {id:21, cat:'Cucina', name:'Padella antiaderente Tefal 28 cm', icon:'pan', image:null, price:89, was:120, rating:4.7, badge:null, stock:true},
+    {id:22, cat:'Cucina', name:'Bollitore elettrico in acciaio inox', icon:'kettle', image:null, price:79, was:99, rating:4.5, badge:null, stock:true},
     {id:23, cat:'Cucina', name:'Set pentole da cucina 8 pezzi', icon:'pan', image:null, price:299, was:359, rating:4.8, badge:'Sconto 17%', stock:true},
-    {id:24, cat:'Cucina', name:'Bollitore elettrico con controllo della temperatura', icon:'kettle', image:'https://picsum.photos/seed/ziz24/500/420', price:119, was:null, rating:4.4, badge:'Nuovo', stock:true},
+    {id:24, cat:'Cucina', name:'Bollitore elettrico con controllo della temperatura', icon:'kettle', image:null, price:119, was:null, rating:4.4, badge:'Nuovo', stock:true},
   ];
 
   const PAGE_SIZE = 8;
