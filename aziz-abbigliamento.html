@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ziz | Tutti i prodotti</title>
+<title>Aziz | Tutti i prodotti</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="centro-css.css">
@@ -194,7 +194,7 @@
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <span>© 2026 ziz. Tutti i diritti riservati.</span>
+    <span>© 2026 Aziz. Tutti i diritti riservati.</span>
     <span>Prototipo di interfaccia e-commerce</span>
   </div>
 </footer>
@@ -235,42 +235,31 @@
   };
 
   // ---------- Categories ----------
-  const CATEGORIES = ['Utensili manuali','Elettroutensili','Illuminazione','Pittura','Pulizia','Cucina'];
+  const CATEGORIES = ['','','','','',''];
 
   // ---------- Product data ----------
   // Campo "image": URL della foto reale del prodotto. Se lasciato null (o se il
   // link non si carica), la scheda mostra automaticamente l'icona come prima:
   // non è mai richiesto avere una foto per ogni prodotto.
   const PRODUCTS = [
-    {id:1, cat:'Utensili manuali', name:'Martello da falegname con impugnatura in gomma', icon:'hammer', image:null, price:39, was:55, rating:4.8, badge:'Più venduto', stock:true},
-    {id:2, cat:'Utensili manuali', name:'Chiave inglese regolabile', icon:'wrench', image:null, price:34, was:null, rating:4.4, badge:null, stock:true},
-    {id:3, cat:'Utensili manuali', name:'Set cacciaviti di precisione 32 pezzi', icon:'screwdriver', image:null, price:49, was:65, rating:4.6, badge:null, stock:true},
-    {id:4, cat:'Utensili manuali', name:'Cassetta degli attrezzi 45 pezzi', icon:'hammer', image:null, price:129, was:159, rating:4.7, badge:'Sconto 19%', stock:false},
+    {id:1, cat:'Utensili manuali', name:'Family Valigia Fuxia XS (32X15X27)', icon:'hammer', image:'img-add/2001.jpg', price:20, was:null, rating:4.8, badge:'Più venduto', stock:true},
+    {id:2, cat:'Utensili manuali', name:'Family Valigia Fuxia XS (32X15X27)', icon:'wrench', image:'img-add/2002.jpg', price:20, was:null, rating:4.4, badge:null, stock:true},
+    {id:3, cat:'Utensili manuali', name:'Family Valigia Fuxia XS (32X15X27)', icon:'screwdriver', image:'img-add/2003.jpg', price:20, was:null, rating:4.6, badge:null, stock:true},
+   
+    {id:4, cat:'Utensili manuali', name:'', icon:'hammer', image:'img-add/2004.jpg', price:25, was:null, rating:4.7, badge:'Sconto 19%', stock:false},
 
-    {id:5, cat:'Elettroutensili', name:'Trapano avvitatore a batteria 18V', icon:'drill', image:null, price:249, was:329, rating:4.9, badge:'Sconto 24%', stock:true},
-    {id:6, cat:'Elettroutensili', name:'Scala in alluminio pieghevole 5 gradini', icon:'ladder', image:null, price:179, was:215, rating:4.6, badge:'Sconto', stock:true},
-    {id:7, cat:'Elettroutensili', name:'Cacciavite elettrico ricaricabile USB', icon:'screwdriver', image:null, price:89, was:null, rating:4.3, badge:'Nuovo', stock:true},
-    {id:8, cat:'Elettroutensili', name:'Presa multipla elettrica', icon:'socket', image:null, price:45, was:null, rating:4.5, badge:null, stock:true},
-
-    {id:9, cat:'Illuminazione', name:'Lampadina LED smart controllabile', icon:'bulb', image:null, price:29, was:null, rating:4.6, badge:null, stock:true},
-    {id:10, cat:'Illuminazione', name:'Lampada da scrivania pieghevole', icon:'lamp', image:null, price:69, was:89, rating:4.4, badge:null, stock:true},
-    {id:11, cat:'Illuminazione', name:'Striscia LED colorata 5 metri', icon:'bulb', image:null, price:55, was:75, rating:4.7, badge:'Sconto 27%', stock:true},
-    {id:12, cat:'Illuminazione', name:'Lampada da parete esterna impermeabile', icon:'lamp', image:null, price:99, was:null, rating:4.2, badge:null, stock:false},
-
-    {id:13, cat:'Pittura', name:'Set pennelli professionali 5 pezzi', icon:'brush', image:null, price:59, was:79, rating:4.5, badge:null, stock:true},
-    {id:14, cat:'Pittura', name:'Rullo per pittura con vaschetta', icon:'roller', image:null, price:35, was:null, rating:4.3, badge:null, stock:true},
-    {id:15, cat:'Pittura', name:'Pittura murale per interni 3,6 litri', icon:'brush', image:null, price:145, was:170, rating:4.6, badge:'Sconto', stock:true},
-    {id:16, cat:'Pittura', name:'Nastro adesivo di protezione per pittura', icon:'roller', image:null, price:12, was:null, rating:4.1, badge:null, stock:true},
-
-    {id:17, cat:'Pulizia', name:'Detergente spray multiuso', icon:'spray', image:null, price:18, was:null, rating:4.3, badge:'Nuovo', stock:true},
-    {id:18, cat:'Pulizia', name:'Scopa a mocio rotante con doppio secchio', icon:'mop', image:null, price:99, was:129, rating:4.8, badge:'Più venduto', stock:true},
-    {id:19, cat:'Pulizia', name:'Set spazzole per pulizia domestica', icon:'spray', image:null, price:27, was:null, rating:4.2, badge:null, stock:true},
-    {id:20, cat:'Pulizia', name:'Aspirapolvere portatile a batteria', icon:'mop', image:null, price:159, was:199, rating:4.6, badge:'Sconto 20%', stock:false},
-
-    {id:21, cat:'Cucina', name:'Padella antiaderente Tefal 28 cm', icon:'pan', image:null, price:89, was:120, rating:4.7, badge:null, stock:true},
-    {id:22, cat:'Cucina', name:'Bollitore elettrico in acciaio inox', icon:'kettle', image:null, price:79, was:99, rating:4.5, badge:null, stock:true},
-    {id:23, cat:'Cucina', name:'Set pentole da cucina 8 pezzi', icon:'pan', image:null, price:299, was:359, rating:4.8, badge:'Sconto 17%', stock:true},
-    {id:24, cat:'Cucina', name:'Bollitore elettrico con controllo della temperatura', icon:'kettle', image:null, price:119, was:null, rating:4.4, badge:'Nuovo', stock:true},
+    {id:5, cat:'Elettroutensili', name:'', icon:'drill', image:'img-add/2005.jpg', price:25, was:null, rating:4.9, badge:'Sconto 24%', stock:true},
+    
+    {id:6, cat:'Elettroutensili', name:'Borssa di paglia estiva', icon:'ladder', image:'img-add/2006.jpg', price:10, was:null, rating:4.6, badge:'Sconto', stock:true},
+    {id:7, cat:'Elettroutensili', name:'Borssa di paglia estiva', icon:'screwdriver', image:'img-add/2007.jpg', price:10, was:null, rating:4.3, badge:'Nuovo', stock:true},
+    {id:8, cat:'Elettroutensili', name:'Borssa di paglia estiva', icon:'socket', image:'img-add/2008.jpg', price:10, was:null, rating:4.5, badge:null, stock:true},
+    {id:9, cat:'Illuminazione', name:'Borsa in paglia con dettagli in pelle  marrone', icon:'bulb', image:'img-add/2009.jpg', price:10, was:null, rating:4.6, badge:null, stock:true},
+   
+    {id:10, cat:'Illuminazione', name:'Cappello', icon:'lamp', image:'img-add/2010.jpg', price:10, was:null, rating:4.4, badge:null, stock:true},
+    {id:11, cat:'Illuminazione', name:'Cappello', icon:'bulb', image:'img-add/2011.jpg', price:10, was:null, rating:4.7, badge:'Sconto 27%', stock:true},
+    {id:12, cat:'Illuminazione', name:'cappello', icon:'lamp', image:'img-add/2012.jpg', price:10, was:null, rating:4.2, badge:null, stock:false},
+    {id:13, cat:'Pittura', name:'Cappello', icon:'brush', image:'img-add/2013.jpg', price:10, was:null, rating:4.5, badge:null, stock:true},
+    {id:14, cat:'Pittura', name:'Cappello', icon:'roller', image:'img-add/2014.jpg', price:10, was:null, rating:4.3, badge:null, stock:true},
   ];
 
   const PAGE_SIZE = 8;
