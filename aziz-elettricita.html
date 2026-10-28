@@ -243,35 +243,24 @@
   // link non si carica), la scheda mostra automaticamente l'icona come prima:
   // non è mai richiesto avere una foto per ogni prodotto.
   const PRODUCTS = [
-    {id:1, cat:'Utensili manuali', name:'Martello da falegname con impugnatura in gomma', icon:'hammer', image:null, price:39, was:55, rating:4.8, badge:'Più venduto', stock:true},
-    {id:2, cat:'Utensili manuali', name:'Chiave inglese regolabile', icon:'wrench', image:null, price:34, was:null, rating:4.4, badge:null, stock:true},
-    {id:3, cat:'Utensili manuali', name:'Set cacciaviti di precisione 32 pezzi', icon:'screwdriver', image:null, price:49, was:65, rating:4.6, badge:null, stock:true},
-    {id:4, cat:'Utensili manuali', name:'Cassetta degli attrezzi 45 pezzi', icon:'hammer', image:null, price:129, was:159, rating:4.7, badge:'Sconto 19%', stock:false},
+    {id:1, cat:'Utensili manuali',name:'Lampada a forma di G con Caricatore Wireless', icon:'hammer', image:'img-Ele/1100.jpg', price:20, was:24.8, rating:4.8, badge:'Più venduto', stock:true},
+    {id:2, cat:'Utensili manuali', name:'Ascoltare musica', icon:'wrench', image:'img-Ele/1101.jpg', price:20, was:null, rating:4.4, badge:null, stock:true},
+    {id:3, cat:'Utensili manuali', name:'Sveglia classica ', icon:'screwdriver', image:'img-Ele/1102.png', price:7.50, was:null, rating:4.6, badge:null, stock:true},
+    {id:4, cat:'Utensili manuali', name:'Cassa bluetooth portatile', icon:'hammer', image:'img-Ele/1103.jpg', price:80.00, was:null, rating:4.7, badge:'Sconto 19%', stock:false},
 
-    {id:5, cat:'Elettroutensili', name:'Trapano avvitatore a batteria 18V', icon:'drill', image:null, price:249, was:329, rating:4.9, badge:'Sconto 24%', stock:true},
-    {id:6, cat:'Elettroutensili', name:'Scala in alluminio pieghevole 5 gradini', icon:'ladder', image:null, price:179, was:215, rating:4.6, badge:'Sconto', stock:true},
-    {id:7, cat:'Elettroutensili', name:'Cacciavite elettrico ricaricabile USB', icon:'screwdriver', image:null, price:89, was:null, rating:4.3, badge:'Nuovo', stock:true},
-    {id:8, cat:'Elettroutensili', name:'Presa multipla elettrica', icon:'socket', image:null, price:45, was:null, rating:4.5, badge:null, stock:true},
+    {id:5, cat:'Elettroutensili', name:'Cassa bluetooth ', icon:'drill', image:'img-Ele/1104.jpg', price:80.00, was:null, rating:4.9, badge:'Sconto 24%', stock:true},
+    {id:6, cat:'Elettroutensili', name:'Cassa bluetooth ', icon:'ladder', image:'img-Ele/1105.png', price:29.00, was:null, rating:4.6, badge:'Sconto', stock:true},
+    {id:7, cat:'Elettroutensili', name:'Lampada da scrivania a forma di orsetto', icon:'screwdriver', image:'img-Ele/1106.png', price:10.00, was:null, rating:4.3, badge:'Nuovo', stock:true},
+    {id:8, cat:'Elettroutensili', name:'orologio da polso', icon:'socket', image:'img-Ele/1107.jpg', price:10.00, was:null, rating:4.5, badge:null, stock:true},
 
-    {id:9, cat:'Illuminazione', name:'Lampadina LED smart controllabile', icon:'bulb', image:null, price:29, was:null, rating:4.6, badge:null, stock:true},
-    {id:10, cat:'Illuminazione', name:'Lampada da scrivania pieghevole', icon:'lamp', image:null, price:69, was:89, rating:4.4, badge:null, stock:true},
-    {id:11, cat:'Illuminazione', name:'Striscia LED colorata 5 metri', icon:'bulb', image:null, price:55, was:75, rating:4.7, badge:'Sconto 27%', stock:true},
-    {id:12, cat:'Illuminazione', name:'Lampada da parete esterna impermeabile', icon:'lamp', image:null, price:99, was:null, rating:4.2, badge:null, stock:false},
+    {id:9, cat:'Illuminazione', name:'Una lampada decorativa cilindrica', icon:'bulb', image:'img-Ele/1108.jpg', price:13.00, was:null, rating:4.6, badge:null, stock:true},
+    {id:10, cat:'Illuminazione', name:'stufetta portatila', icon:'lamp', image:'img-Ele/1109.jpg', price:10.00, was:89, rating:4.4, badge:null, stock:true},
+    {id:11, cat:'Illuminazione', name:'Diffusore di aromi', icon:'bulb', image:'img-Ele/1110.png', price:36.00, was:null, rating:4.7, badge:'Sconto 27%', stock:true},
+    {id:12, cat:'Illuminazione', name:'Radio portatile', icon:'lamp', image:'null', price:null, was:null, rating:4.2, badge:null, stock:false},
 
-    {id:13, cat:'Pittura', name:'Set pennelli professionali 5 pezzi', icon:'brush', image:null, price:59, was:79, rating:4.5, badge:null, stock:true},
-    {id:14, cat:'Pittura', name:'Rullo per pittura con vaschetta', icon:'roller', image:null, price:35, was:null, rating:4.3, badge:null, stock:true},
-    {id:15, cat:'Pittura', name:'Pittura murale per interni 3,6 litri', icon:'brush', image:null, price:145, was:170, rating:4.6, badge:'Sconto', stock:true},
-    {id:16, cat:'Pittura', name:'Nastro adesivo di protezione per pittura', icon:'roller', image:null, price:12, was:null, rating:4.1, badge:null, stock:true},
-
-    {id:17, cat:'Pulizia', name:'Detergente spray multiuso', icon:'spray', image:null, price:18, was:null, rating:4.3, badge:'Nuovo', stock:true},
-    {id:18, cat:'Pulizia', name:'Scopa a mocio rotante con doppio secchio', icon:'mop', image:null, price:99, was:129, rating:4.8, badge:'Più venduto', stock:true},
-    {id:19, cat:'Pulizia', name:'Set spazzole per pulizia domestica', icon:'spray', image:null, price:27, was:null, rating:4.2, badge:null, stock:true},
-    {id:20, cat:'Pulizia', name:'Aspirapolvere portatile a batteria', icon:'mop', image:null, price:159, was:199, rating:4.6, badge:'Sconto 20%', stock:false},
-
-    {id:21, cat:'Cucina', name:'Padella antiaderente Tefal 28 cm', icon:'pan', image:null, price:89, was:120, rating:4.7, badge:null, stock:true},
-    {id:22, cat:'Cucina', name:'Bollitore elettrico in acciaio inox', icon:'kettle', image:null, price:79, was:99, rating:4.5, badge:null, stock:true},
-    {id:23, cat:'Cucina', name:'Set pentole da cucina 8 pezzi', icon:'pan', image:null, price:299, was:359, rating:4.8, badge:'Sconto 17%', stock:true},
-    {id:24, cat:'Cucina', name:'Bollitore elettrico con controllo della temperatura', icon:'kettle', image:null, price:119, was:null, rating:4.4, badge:'Nuovo', stock:true},
+    {id:13, cat:'Pittura', name:'Ferro da stiro a vapore', icon:'brush', image:'img-Ele/1112.jpg', price:27.50, was:null, rating:4.5, badge:null, stock:true},
+    {id:14, cat:'Pittura', name:'orologio da polso', icon:'roller', image:'img-Ele/1113.jpg', price:10.00, was:null, rating:4.3, badge:null, stock:true},
+ 
   ];
 
   const PAGE_SIZE = 8;
